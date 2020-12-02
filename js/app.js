@@ -29,7 +29,6 @@ const cotizationVerification = () => {
     const {Name} = cripto.CoinInfo; 
     const {PRICE} = cripto.DISPLAY.USD; 
     if (Name === criptomonedasSelect.value ) {
-      console.log(`Coincide con: ${Name} y su precio es: ${PRICE}`);
       cotizationPrint(PRICE)
     }
   }))
@@ -40,7 +39,6 @@ const obtenerCriptomonedas = criptomonedas => new Promise(resolve=>{
 })
 
 const selectCriptomonedas = (criptomonedas) => {
-  console.log(criptomonedas);
   criptomonedas.forEach(cripto=>{
     const {FullName, Name} = cripto.CoinInfo;
 
